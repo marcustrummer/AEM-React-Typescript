@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/valtech/clientlibs"/>
+    <filter root="/apps/valtech/components"/>
+    <filter root="/apps/valtech/i18n"/>
+</workspaceFilter>

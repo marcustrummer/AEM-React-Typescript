@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/valtech" mode="merge"/>
+    <filter root="/content/valtech" mode="merge"/>
+    <filter root="/content/dam/valtech" mode="merge">
+        <exclude pattern="/content/dam/valtech(/.*)?"/>
+        <include pattern="/content/dam/valtech/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/valtech/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/valtech" mode="merge"/>
+</workspaceFilter>
