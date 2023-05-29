@@ -35,12 +35,96 @@
                                     <column jcr:primaryType="nt:unstructured"
                                         sling:resourceType="granite/ui/components/coral/foundation/container">
                                         <items jcr:primaryType="nt:unstructured">
-                                            <title 
+                                            <title
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="cq/gui/components/authoring/dialog/richtext"
                                                 fieldDescription="Titulo da sessao"
-                                                fieldLabel="Titulo" 
+                                                fieldLabel="Titulo"
                                                 name="./title"
+                                                useFixedInlineToolbar="{Boolean}true">
+                                                <rtePlugins jcr:primaryType="nt:unstructured">
+                                                    <paraformat jcr:primaryType="nt:unstructured"
+                                                        features="*">
+                                                        <formats jcr:primaryType="nt:unstructured">
+                                                            <default_p
+                                                                jcr:primaryType="nt:unstructured"
+                                                                description="Paragraph" tag="h2" />
+                                                            <default_h1
+                                                                jcr:primaryType="nt:unstructured"
+                                                                description="Heading 1" tag="h1" />
+                                                            <default_h2
+                                                                jcr:primaryType="nt:unstructured"
+                                                                description="Heading 2" tag="h2" />
+                                                            <default_h3
+                                                                jcr:primaryType="nt:unstructured"
+                                                                description="Heading 3" tag="h3" />
+                                                            <default_h4
+                                                                jcr:primaryType="nt:unstructured"
+                                                                description="Heading 4" tag="h4" />
+                                                            <default_h5
+                                                                jcr:primaryType="nt:unstructured"
+                                                                description="Heading 5" tag="h5" />
+                                                            <default_h6
+                                                                jcr:primaryType="nt:unstructured"
+                                                                description="Heading 6" tag="h6" />
+                                                            <default_pre
+                                                                jcr:primaryType="nt:unstructured"
+                                                                description="Preformatted" tag="pre" />
+                                                        </formats>
+                                                    </paraformat>
+                                                    <table jcr:primaryType="nt:unstructured"
+                                                        features="-">
+                                                        <hiddenHeaderConfig
+                                                            jcr:primaryType="nt:unstructured"
+                                                            hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden"
+                                                            hiddenHeaderEditingCSS="cq-RichText-hiddenHeader--editing" />
+                                                    </table>
+                                                    <tracklinks jcr:primaryType="nt:unstructured"
+                                                        features="-" />
+                                                </rtePlugins>
+                                                <uiSettings jcr:primaryType="nt:unstructured">
+                                                    <cui jcr:primaryType="nt:unstructured">
+                                                        <inline jcr:primaryType="nt:unstructured"
+                                                            toolbar="[#paraformat]">
+                                                            <popovers
+                                                                jcr:primaryType="nt:unstructured">
+                                                                <paraformat
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    items="paraformat:getFormats:paraformat-pulldown"
+                                                                    ref="paraformat" />
+                                                            </popovers>
+                                                        </inline>
+                                                        <dialogFullScreen
+                                                            jcr:primaryType="nt:unstructured"
+                                                            toolbar="[format#bold,format#italic,format#underline,justify#justifyleft,justify#justifycenter,justify#justifyright,lists#unordered,lists#ordered,lists#outdent,lists#indent,links#modifylink,links#unlink,table#createoredit,#paraformat,image#imageProps]">
+                                                            <popovers
+                                                                jcr:primaryType="nt:unstructured">
+                                                                <paraformat
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    items="paraformat:getFormats:paraformat-pulldown"
+                                                                    ref="paraformat" />
+                                                            </popovers>
+                                                        </dialogFullScreen>
+                                                        <tableEditOptions
+                                                            jcr:primaryType="nt:unstructured"
+                                                            toolbar="[table#insertcolumn-before,table#insertcolumn-after,table#removecolumn,-,table#insertrow-before,table#insertrow-after,table#removerow,-,table#mergecells-right,table#mergecells-down,table#mergecells,table#splitcell-horizontal,table#splitcell-vertical,-,table#selectrow,table#selectcolumn,-,table#ensureparagraph,-,table#modifytableandcell,table#removetable,-,undo#undo,undo#redo,-,table#exitTableEditing,-]" />
+                                                    </cui>
+                                                </uiSettings>
+                                            </title>
+                                            <swapColumns
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="Marque essa opcao caso queira inverter o CTA e a Imagem de lugar"
+                                                name="./swapColumns"
+                                                text="Inverter ordem do componente?"
+                                                uncheckedValue="false"
+                                                value="true" />
+                                            <description
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                fieldDescription="Descricao da sessao"
+                                                fieldLabel="Descricao"
+                                                name="./description"
                                                 useFixedInlineToolbar="{Boolean}true">
                                                 <rtePlugins jcr:primaryType="nt:unstructured">
                                                     <format jcr:primaryType="nt:unstructured"
@@ -146,14 +230,7 @@
                                                             toolbar="[table#insertcolumn-before,table#insertcolumn-after,table#removecolumn,-,table#insertrow-before,table#insertrow-after,table#removerow,-,table#mergecells-right,table#mergecells-down,table#mergecells,table#splitcell-horizontal,table#splitcell-vertical,-,table#selectrow,table#selectcolumn,-,table#ensureparagraph,-,table#modifytableandcell,table#removetable,-,undo#undo,undo#redo,-,table#exitTableEditing,-]" />
                                                     </cui>
                                                 </uiSettings>
-                                            </title>
-                                            <description
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                fieldDescription="Digite uma descricao"
-                                                fieldLabel="Descricao"
-                                                name="./description"
-                                                required="true" />
+                                            </description>
                                             <imgReference
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
@@ -173,7 +250,7 @@
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                 fieldimgAlt="Digite a descricao da imagem"
-                                                fieldLabel="Descricao"
+                                                fieldLabel="Alt da imagem"
                                                 name="./description"
                                                 required="true" />
                                             <buttonCTA
@@ -191,7 +268,7 @@
                                                                 fieldLabel="Label do botao"
                                                                 emptyText="Digite aqui o label do botao"
                                                                 name="./buttonCTA/text"
-                                                                required="{Boolean}false" />
+                                                                required="{Boolean}true" />
                                                             <linkURL
                                                                 jcr:primaryType="nt:unstructured"
                                                                 sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
@@ -200,7 +277,7 @@
                                                                 emptyText=""
                                                                 nodeTypes="cq:Page"
                                                                 name="./buttonCTA/linkURL"
-                                                                required="{Boolean}false"
+                                                                required="{Boolean}true"
                                                                 rootPath="/content/valtech-adobe-training" />
                                                             <isOpenOnSameWindow
                                                                 jcr:primaryType="nt:unstructured"
@@ -214,14 +291,6 @@
                                                     </item>
                                                 </items>
                                             </buttonCTA>
-                                            <swapColumns
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
-                                                fieldDescription="Marque essa opcao caso queira inverter o CTA e a Imagem de lugar"
-                                                name="./swapColumns"
-                                                text="Inverter ordem do componente?"
-                                                uncheckedValue="false"
-                                                value="true" />
                                         </items>
                                     </column>
 

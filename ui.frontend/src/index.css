@@ -27,7 +27,7 @@ body {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
 h1,
@@ -39,5 +39,5 @@ p,
 .nav-container,
 .rw-box {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-  color: #000000;
+  color: #ffffff;
 }
