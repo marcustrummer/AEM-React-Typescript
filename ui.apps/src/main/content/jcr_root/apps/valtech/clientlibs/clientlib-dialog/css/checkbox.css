@@ -1,0 +1,17 @@
+.field {
+    padding: 16px;
+}
+.parent {
+    color: #646464;
+    font-size: 12px;
+    padding-left: 16px;
+}
+.parent-section {
+    width: 496px;
+    background-color: #e9e9e9;
+}
+.section-color {
+    background-color: #e9e9e9;
+    padding: 12px;
+    margin-top: 20px !important;
+}
