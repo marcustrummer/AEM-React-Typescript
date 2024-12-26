@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+	xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+	xmlns:cq="http://www.day.com/jcr/cq/1.0"
+	xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+	sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+	cq:showOnCreate="{Boolean}true"
+	jcr:primaryType="nt:unstructured"
+	jcr:title="Custom Scripts">
+	<items jcr:primaryType="nt:unstructured">
+		<column jcr:primaryType="nt:unstructured"
+			sling:resourceType="granite/ui/components/coral/foundation/container">
+			<items jcr:primaryType="nt:unstructured">
+				<customScripts jcr:primaryType="nt:unstructured"
+					jcr:title="Custom Scripts"
+					sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+					<items jcr:primaryType="nt:unstructured">
+						<startBodyScripts jcr:primaryType="nt:unstructured"
+							sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+							fieldLabel="Start Body Scripts"
+							fieldDescription="Scripts from /home to execute below tag body"
+							name="./startBodyScripts" />
+						<shouldNotRunScript jcr:primaryType="nt:unstructured"
+							sling:resourceType="granite/ui/components/foundation/form/checkbox"
+							text="Should not run scripts?"
+							fieldDescription="If checked the global scripts won't run"
+							name="./shouldNotRunScripts"
+							value="true"
+							uncheckedValue="false" />
+						<startPageBodyScripts jcr:primaryType="nt:unstructured"
+							sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+							fieldLabel="Start Page Body Scripts"
+							fieldDescription="Scripts to execute below tag body for each page separately"
+							name="./startPageBodyScripts" />
+					</items>
+				</customScripts>
+			</items>
+		</column>
+	</items>
+</jcr:root>
