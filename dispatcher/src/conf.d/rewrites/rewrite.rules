@@ -45,6 +45,12 @@ RewriteCond %{HTTP_HOST} ^example\.com\.br$ [NC]
 RewriteCond %{HTTP_HOST} !^(dev|test|stg)\.example\.com\.br [NC]
 RewriteRule ^(.*)$ https://www.example.com.br%{REQUEST_URI} [L,R=301]
 
+# Force the removal of /content/example/us/en
+# RewriteRule ^/content/${CONTENT_FOLDER_NAME}/us/en/home.html$ / [L,R=301]
+# RewriteRule ^/content/${CONTENT_FOLDER_NAME}/us/en/(.*).html$ /$1.html [L,R=301]
+# RewriteRule ^/content/${CONTENT_FOLDER_NAME}/us/en/?(.*).model.json$ /$1.model.json [L,R=301]
+
+
 RewriteCond %{REQUEST_URI} !^/apps
 RewriteCond %{REQUEST_URI} !^/bin
 RewriteCond %{REQUEST_URI} !^/content
